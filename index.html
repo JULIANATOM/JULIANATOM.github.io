@@ -8,242 +8,218 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @media print {
+            @page { margin: 0; size: auto; }
             .no-print { display: none !important; }
             body { background: white !important; padding: 0 !important; font-size: 10pt; color: black !important; }
             .cv-container { box-shadow: none !important; border: none !important; width: 100% !important; max-width: 100% !important; margin: 0 !important; }
-            .sidebar { background-color: #f8fafc !important; -webkit-print-color-adjust: exact; width: 30% !important; border-right: 2px solid #e2e8f0 !important; }
-            .main-content { width: 70% !important; }
-            .experience-item { page-break-inside: avoid; margin-bottom: 2rem; }
+            .sidebar { background-color: #f8fafc !important; -webkit-print-color-adjust: exact; width: 32% !important; border-right: 2px solid #e2e8f0 !important; min-height: 100vh; }
+            .main-content { width: 68% !important; padding: 1.5cm !important; }
             .page-break { page-break-before: always; }
+            .experience-item { page-break-inside: avoid; margin-bottom: 1.5rem; }
+            header { background-color: #0f172a !important; -webkit-print-color-adjust: exact; padding: 1cm !important; }
         }
         .sidebar { background-color: #f8fafc; }
-        .experience-item { border-left: 2px solid #e2e8f0; padding-left: 1.5rem; position: relative; }
-        .experience-item::before { content: ''; position: absolute; left: -9px; top: 0; width: 16px; h-8 px; height: 16px; border-radius: 50%; background-color: #0d9488; }
     </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-800 leading-relaxed">
 
     <div class="cv-container max-w-5xl mx-auto my-10 bg-white shadow-2xl rounded-lg border border-slate-200 overflow-hidden">
         
-        <header class="p-12 border-b-8 border-teal-600 bg-slate-900 text-white">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="text-center md:text-left">
-                    <h1 class="text-6xl font-black tracking-tighter uppercase mb-2">JULIÁN CHAPARRO</h1>
-                    <p class="text-teal-400 text-xl font-bold uppercase tracking-widest">Senior Data Analyst | Operational Intelligence & BI Expert</p>
+        <header class="p-10 bg-slate-900 text-white border-b-8 border-teal-600">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h1 class="text-5xl font-black tracking-tighter uppercase mb-2">JULIÁN CHAPARRO</h1>
+                    <p class="text-teal-400 text-lg font-bold uppercase tracking-widest">Senior Data Analyst | Operational Intelligence & BI Expert</p>
                 </div>
-                <div class="grid grid-cols-1 gap-3 text-sm text-slate-300">
-                    <p><i class="fas fa-phone text-teal-500 mr-3"></i>(+57) 305-858 7435</p>
-                    <p><i class="fas fa-envelope text-teal-500 mr-3"></i>julianchaparrolatorre@gmail.com</p>
-                    <p><i class="fab fa-linkedin text-teal-500 mr-3"></i>linkedin.com/in/julianchaparro</p>
-                    <p><i class="fas fa-map-marker-alt text-teal-500 mr-3"></i>Bogotá, Colombia</p>
+                <div class="mt-6 md:mt-0 flex flex-col items-center md:items-end text-sm text-slate-300 space-y-1">
+                    <p class="whitespace-nowrap"><i class="fas fa-phone text-teal-500 mr-2"></i>(+57) 305-858 7435</p>
+                    <p class="whitespace-nowrap"><i class="fas fa-envelope text-teal-500 mr-2"></i>julianchaparrolatorre@gmail.com</p>
+                    <p class="whitespace-nowrap"><i class="fab fa-linkedin text-teal-500 mr-2"></i>linkedin.com/in/julianchaparro</p>
+                    <p class="whitespace-nowrap"><i class="fas fa-map-marker-alt text-teal-500 mr-2"></i>Bogotá, Colombia</p>
                 </div>
             </div>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-12">
             
-            <aside class="md:col-span-4 sidebar p-10 space-y-10">
+            <aside class="md:col-span-4 sidebar p-8 space-y-10">
                 
                 <section>
-                    <h3 class="text-teal-700 font-black uppercase text-sm tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Perfil Senior</h3>
+                    <h3 class="text-teal-700 font-black uppercase text-xs tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Perfil</h3>
                     <p class="text-xs text-slate-600 text-justify">
-                        Analista de Datos Senior con más de 15 años de trayectoria transformando datos operativos en activos estratégicos. Experto en el ciclo de vida del dato, desde la ingesta en Azure/Databricks hasta el desarrollo de modelos predictivos y dashboards de alto impacto para juntas directivas[cite: 56, 57, 58].
+                        Senior Data Analyst con más de 15 años de trayectoria transformando datos operativos en activos estratégicos. Experto en el ciclo de vida completo del dato, desde la ingesta en Azure/Databricks hasta el desarrollo de modelos predictivos y dashboards de alto nivel para juntas directivas.
                     </p>
                 </section>
 
                 <section>
-                    <h3 class="text-teal-700 font-black uppercase text-sm tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Core Skills</h3>
-                    <div class="space-y-6 text-[11px]">
+                    <h3 class="text-teal-700 font-black uppercase text-xs tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Habilidades Core</h3>
+                    <div class="space-y-4 text-[11px]">
                         <div>
                             <p class="font-bold text-slate-500 uppercase mb-2">Análisis & ML</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded">Python (Pandas)</span>
-                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded">Scikit-learn</span>
-                                <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded">EDA / Stats</span>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded">Python (Pandas)</span>
+                                <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded">Scikit-learn</span>
+                                <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded">EDA / Stats</span>
                             </div>
                         </div>
                         <div>
                             <p class="font-bold text-slate-500 uppercase mb-2">BI & Visualización</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Power BI (DAX)</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Tableau</span>
-                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded">Excel (VBA/PQ)</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="font-bold text-slate-500 uppercase mb-2">Cloud & Data Ops</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded">Azure Data Factory</span>
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded">Databricks (Spark)</span>
-                                <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded">SQL Server / SSIS</span>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Power BI (DAX)</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Tableau</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded">Excel (VBA)</span>
                             </div>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                    <h3 class="text-teal-700 font-black uppercase text-sm tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Logros Métricos</h3>
+                    <h3 class="text-teal-700 font-black uppercase text-xs tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Logros Métricos</h3>
                     <ul class="space-y-4 text-xs">
                         <li class="flex items-start">
-                            <i class="fas fa-chart-line text-teal-500 mt-1 mr-3"></i>
-                            <span><b>-30% tiempo:</b> Optimización de recuperación de datos mediante índices SQL[cite: 72].</span>
+                            <i class="fas fa-chart-line text-teal-500 mt-1 mr-2"></i>
+                            <span><b>-30% tiempo:</b> Optimización de recuperación mediante índices SQL.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check-double text-teal-500 mt-1 mr-3"></i>
-                            <span><b>+20% Precisión:</b> Mejora en proyecciones de ventas con modelos de ML[cite: 75].</span>
+                            <i class="fas fa-check text-teal-500 mt-1 mr-2"></i>
+                            <span><b>+20% Precisión:</b> Mejora en proyecciones con modelos ML.</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-clock text-teal-500 mt-1 mr-3"></i>
-                            <span><b>-40% Esfuerzo:</b> Automatización de reporting corporativo en Power BI[cite: 76].</span>
+                            <i class="fas fa-clock text-teal-500 mt-1 mr-2"></i>
+                            <span><b>-40% Esfuerzo:</b> Automatización de informes en Power BI.</span>
                         </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h3 class="text-teal-700 font-black uppercase text-sm tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Educación</h3>
-                    <div class="text-xs space-y-4">
-                        <div>
-                            <p class="font-bold text-slate-800">Postgrado en Ciencia de Datos</p>
-                            <p class="text-slate-500">University of Texas at Austin[cite: 201].</p>
-                        </div>
-                        <div>
-                            <p class="font-bold text-slate-800">Ingeniero de Sistemas</p>
-                            <p class="text-slate-500">Universidad EAN[cite: 204].</p>
-                        </div>
+                    <h3 class="text-teal-700 font-black uppercase text-xs tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Certificaciones</h3>
+                    <div class="text-[10px] space-y-3 text-slate-600 font-bold">
+                        <p class="flex items-center"><i class="fas fa-award text-teal-500 mr-2"></i> DS4A (Correlation One)</p>
+                        <p class="flex items-center"><i class="fas fa-award text-teal-500 mr-2"></i> Power BI Analyst (Microsoft)</p>
+                        <p class="flex items-center"><i class="fas fa-award text-teal-500 mr-2"></i> Gestión Ágil con Trello</p>
+                        <p class="flex items-center"><i class="fas fa-award text-teal-500 mr-2"></i> Historias de Usuario (Agile)</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-teal-700 font-black uppercase text-xs tracking-widest mb-4 border-b-2 border-teal-200 pb-2">Educación</h3>
+                    <div class="text-xs space-y-3">
+                        <p><b>Postgrado Ciencia de Datos</b><br>University of Texas at Austin</p>
+                        <p><b>Ingeniero de Sistemas</b><br>Universidad EAN</p>
                     </div>
                 </section>
             </aside>
 
-            <main class="md:col-span-8 p-12 space-y-12">
+            <main class="md:col-span-8 p-10 space-y-8 main-content">
                 
-                <section>
-                    <h2 class="text-3xl font-black text-slate-900 mb-10 flex items-center italic uppercase border-b-4 border-slate-100 pb-2">
-                        <i class="fas fa-briefcase text-teal-600 mr-4"></i>Experiencia Profesional
-                    </h2>
-                    
-                    <div class="space-y-12">
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-2xl font-bold text-slate-800">Senior Data Analyst / Engineer</h4>
-                                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded">2025</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-4 tracking-wider">Universidad de los Andes</p>
-                            <ul class="text-sm text-slate-600 space-y-3 list-disc ml-4">
-                                <li><b>Monitoreé</b> y validé la integridad de pipelines en Azure, asegurando el cumplimiento del 100% en la calidad del dato para decisiones institucionales[cite: 67, 116].</li>
-                                <li><b>Analicé</b> volúmenes masivos en Databricks, optimizando la orquestación ETL/ELT para mejorar la fiabilidad estadística de los reportes[cite: 68, 117].</li>
-                            </ul>
-                        </div>
+                <h2 class="text-2xl font-black text-slate-900 border-b-4 border-slate-100 pb-2 uppercase italic flex items-center">
+                    <i class="fas fa-briefcase text-teal-600 mr-3"></i>Experiencia Profesional
+                </h2>
 
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-2xl font-bold text-slate-800">DBA & Analista de Datos</h4>
-                                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded">2023 – 2025</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-4 tracking-wider">Sies Salud</p>
-                            <ul class="text-sm text-slate-600 space-y-3 list-disc ml-4">
-                                <li><b>Identifiqué</b> anomalías críticas en datos de salud mediante análisis exploratorio con Python, traduciendo hallazgos en estrategias de atención preventiva[cite: 71, 125].</li>
-                                <li><b>Optimicé</b> la recuperación de registros médicos en un 30% mediante el refinamiento proactivo de índices y análisis de planes de ejecución en SQL Server[cite: 72, 126].</li>
-                            </ul>
+                <div class="space-y-8">
+                    <div class="experience-item border-l-4 border-teal-600 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-xl font-bold text-slate-800 leading-tight">Senior Data Analyst / Engineer</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Abril 2025 – Septiembre 2025</span>
                         </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-2">Universidad de los Andes</p>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc ml-4">
+                            <li>Monitoreé y validé la integridad de flujos en Azure, asegurando una calidad del dato del 100% para decisiones institucionales.</li>
+                            <li>Analicé volúmenes masivos en Databricks, optimizando procesos ETL/ELT para mejorar la fiabilidad de reportes.</li>
+                        </ul>
+                    </div>
 
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-2xl font-bold text-slate-800">Senior Data Analyst</h4>
-                                <span class="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded">2020 – 2023</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-4 tracking-wider">We Web@pp Solution S.A.S.</p>
-                            <ul class="text-sm text-slate-600 space-y-3 list-disc ml-4">
-                                <li><b>Ejecuté</b> análisis de tendencias estadísticas, incrementando la precisión de las proyecciones de ventas en un 20% vía modelos predictivos de ML[cite: 75, 134].</li>
-                                <li><b>Automaticé</b> el reporting de KPIs críticos mediante 5 dashboards en Power BI, reduciendo el tiempo de generación de informes estratégicos en un 40%[cite: 76, 135].</li>
-                            </ul>
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-xl font-bold text-slate-800 leading-tight">DBA & Analista de Datos</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Marzo 2023 – Enero 2025</span>
                         </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-2">Sies Salud</p>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc ml-4">
+                            <li>Identifiqué anomalías críticas en datos de salud mediante Python, traduciendo hallazgos en estrategias de atención preventiva.</li>
+                            <li>Optimicé la recuperación de información médica en un 30% mediante refinamiento de índices en SQL Server.</li>
+                        </ul>
+                    </div>
 
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Líder de Datos & Integración</h4>
-                                <span class="text-xs font-bold text-slate-400">2020</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-3">Iké Asistencia</p>
-                            <p class="text-sm text-slate-600 italic">Supervisé la calidad en procesos de migración masiva, garantizando la integridad de la información histórica para indicadores de alta gerencia mediante el uso estratégico de SSIS[cite: 79, 136].</p>
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-xl font-bold text-slate-800 leading-tight">Senior Data Analyst</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Marzo 2020 – Febrero 2023</span>
                         </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-2">We Web@pp Solution S.A.S.</p>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc ml-4">
+                            <li>Ejecuté análisis de tendencias estadísticas, incrementando la precisión de ventas en un 20% vía modelos de ML.</li>
+                            <li>Automaticé el reporting de KPIs críticos mediante 5 dashboards en Power BI, reduciendo el tiempo de generación en un 40%.</li>
+                        </ul>
+                    </div>
 
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Analista de Bases de Datos</h4>
-                                <span class="text-xs font-bold text-slate-400">2019</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-3">IQVIA</p>
-                            <p class="text-sm text-slate-600"><b>Extraje</b> y procesé datos críticos para investigación médica, diseñando consultas SQL complejas que proveyeron datasets precisos para proyectos globales[cite: 82, 142].</p>
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-lg font-bold text-slate-800 leading-tight">Líder de Datos & Integración</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Enero 2020 – Marzo 2020</span>
                         </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-1">Iké Asistencia</p>
+                        <p class="text-[11px] text-slate-600 italic leading-snug">Supervisé calidad en migración masiva, garantizando integridad histórica mediante uso de SSIS.</p>
+                    </div>
+
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-lg font-bold text-slate-800 leading-tight">Analista de Bases de Datos</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Junio 2019 – Noviembre 2019</span>
+                        </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-1">IQVIA</p>
+                        <p class="text-[11px] text-slate-600 leading-snug">Extraje y procesé datos para investigación médica, diseñando consultas SQL complejas para datasets precisos.</p>
                     </div>
 
                     <div class="page-break"></div>
 
-                    <div class="space-y-12 mt-12">
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Analista Junior de Big Data</h4>
-                                <span class="text-xs font-bold text-slate-400">2018 – 2019</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-3">Baby Market</p>
-                            <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4">
-                                <li>Analicé datos transaccionales masivos para identificar patrones de compra y crear modelos de recomendación[cite: 85, 156].</li>
-                                <li>Automaticé archivos mediante tablas relacionales en SQL Server para optimizar planes de mejora interna.</li>
-                            </ul>
+                    <div class="experience-item border-l-4 border-slate-300 pl-4 mt-8">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-lg font-bold text-slate-800 leading-tight">Analista Junior de Big Data</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Enero 2018 – Mayo 2019</span>
                         </div>
-
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Metrics Analyst</h4>
-                                <span class="text-xs font-bold text-slate-400">2017 – 2018</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-3">Sancho BBDO</p>
-                            <p class="text-sm text-slate-600">Validé métricas de rendimiento digital (KPIs) de redes sociales (Google Analytics, Facebook), procesando datos en Excel para asegurar la medición precisa del ROI[cite: 88, 161].</p>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Asistente de Sistemas</h4>
-                                <span class="text-xs font-bold text-slate-400">2013 – 2017</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-3">Renaware International</p>
-                            <p class="text-sm text-slate-600 italic">Gestioné la disponibilidad de red y servidores Windows Server, asegurando la continuidad operativa mediante el desarrollo de aplicaciones automáticas en Visual Studio[cite: 91, 168].</p>
-                        </div>
-
-                        <div class="experience-item">
-                            <div class="flex justify-between items-baseline mb-2">
-                                <h4 class="text-xl font-bold text-slate-800">Analista de Indicadores Logísticos</h4>
-                                <span class="text-xs font-bold text-slate-400">2006 – 2012</span>
-                            </div>
-                            <p class="text-sm font-black text-teal-600 uppercase mb-4 tracking-wider">Inter Rapidísimo</p>
-                            <ul class="text-sm text-slate-600 space-y-3 list-disc ml-4">
-                                <li><b>Detecté</b> ineficiencias en la cadena de suministro mediante el análisis de 144 indicadores de la red nacional utilizando SQL y Excel Avanzado[cite: 94, 175].</li>
-                                <li><b>Presenté</b> reportes estratégicos a la alta gerencia que permitieron la medición precisa de tiempos de entrega y digitalización nacional[cite: 95, 183].</li>
-                                <li><b>Supervisé</b> el control de calidad en alistamiento y despacho, gestionando personal y bases de datos masivas[cite: 191, 198].</li>
-                            </ul>
-                        </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-1">Baby Market</p>
+                        <p class="text-[11px] text-slate-600 leading-snug">Analicé datos transaccionales masivos para identificar patrones de compra y crear modelos de recomendación.</p>
                     </div>
-                </section>
 
-                <section>
-                    <h2 class="text-2xl font-black text-slate-900 mb-6 flex items-center italic uppercase border-b-4 border-slate-100 pb-2">
-                        <i class="fas fa-award text-teal-600 mr-4"></i>Certificaciones de Industria
-                    </h2>
-                    <div class="grid grid-cols-2 gap-4 text-xs font-bold">
-                        <p class="bg-slate-50 p-3 rounded"><i class="fas fa-check text-teal-500 mr-2"></i>DS4A (Correlation One)[cite: 48, 103].</p>
-                        <p class="bg-slate-50 p-3 rounded"><i class="fas fa-check text-teal-500 mr-2"></i>Power BI Analyst (Microsoft)[cite: 49].</p>
-                        <p class="bg-slate-50 p-3 rounded"><i class="fas fa-check text-teal-500 mr-2"></i>Gestión Ágil con Trello[cite: 116].</p>
-                        <p class="bg-slate-50 p-3 rounded"><i class="fas fa-check text-teal-500 mr-2"></i>Historias de Usuario (Agile)[cite: 114].</p>
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-lg font-bold text-slate-800 leading-tight">Metrics Analyst</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Mayo 2017 – Enero 2018</span>
+                        </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-1">Sancho BBDO</p>
+                        <p class="text-[11px] text-slate-600 leading-snug">Validé métricas de rendimiento digital (KPIs) de redes sociales, asegurando la medición precisa del ROI.</p>
                     </div>
-                </section>
 
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-lg font-bold text-slate-800 leading-tight">Asistente de Sistemas</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Enero 2013 – Mayo 2017</span>
+                        </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-1">Renaware International</p>
+                        <p class="text-[11px] text-slate-600 leading-snug italic">Gestioné disponibilidad de red y servidores, asegurando continuidad operativa mediante desarrollo en Visual Studio.</p>
+                    </div>
+
+                    <div class="experience-item border-l-4 border-slate-300 pl-4">
+                        <div class="flex justify-between items-baseline">
+                            <h4 class="text-xl font-bold text-slate-800 leading-tight text-teal-700">Analista de Indicadores Logísticos</h4>
+                            <span class="text-[10px] font-bold text-slate-400">Junio 2006 – Diciembre 2012</span>
+                        </div>
+                        <p class="text-xs font-black text-teal-600 uppercase mb-2">Inter Rapidísimo</p>
+                        <ul class="text-xs text-slate-600 space-y-1 list-disc ml-4">
+                            <li>Detecté ineficiencias en la red nacional analizando 144 indicadores mediante SQL y Excel Avanzado.</li>
+                            <li>Presenté reportes estratégicos a la alta gerencia que permitieron la medición precisa de tiempos de entrega.</li>
+                            <li>Supervisé el control de calidad en alistamiento y despacho, gestionando personal y bases masivas.</li>
+                        </ul>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
 
     <div class="no-print fixed bottom-8 right-8">
-        <button onclick="window.print()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-5 px-10 rounded-full shadow-2xl transition transform hover:scale-105 flex items-center gap-4 text-lg">
-            <i class="fas fa-file-pdf"></i> DESCARGAR CV COMPLETO (2 PÁGINAS)
+        <button onclick="window.print()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-full shadow-2xl transition transform hover:scale-105 flex items-center gap-3">
+            <i class="fas fa-file-pdf"></i> GENERAR PDF PROFESIONAL (2 PÁGINAS)
         </button>
     </div>
 
